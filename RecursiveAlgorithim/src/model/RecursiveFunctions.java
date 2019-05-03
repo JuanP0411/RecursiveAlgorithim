@@ -45,9 +45,17 @@ public class RecursiveFunctions {
 		}
 	}
 	
+	public static String Invert(String n, int length) {
+		if(length == 0) {
+			return ""+n.charAt(length);
+		}else {
+			return "" +n.charAt(length)+Invert(n,length-1); 
+		}
+	}
+	
 	public static void main(String [] args) {
-		String n =1+2+"";
-		System.out.println(n);
+		String n = "nicolas";
+		System.out.println(Invert(n,n.length()-1));
 	}
 	
 	
